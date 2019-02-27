@@ -1,0 +1,86 @@
+.contenedor{
+	font-size: 16px;
+	text-align: center;
+	background: #604D4D;
+	margin: auto;
+	margin-top:65px;
+	position:relative;
+	width:600px;
+	height:700px;
+	border-bottom:1px solid black;
+    color: aliceblue
+}
+.titulo{
+    width: 600px;
+    height: 100px;
+    background-color: aquamarine;
+}
+input{
+	text-align: center;
+	border: none;
+	border-bottom: 1px solid #5497B5;	
+}
+#t1{
+    cursor: pointer;
+    position: absolute;
+	left: 40px;
+	text-align: center;
+}
+body{
+background: url(fondo1.jpg) no-repeat 50% 50%;
+    font-family: 'Cabin', sans-serif;
+}
+.imga{
+    position: absolute;
+    margin-left: 200px;
+}
+.butto{
+    margin-top: 80px;
+    position: absolute;
+    margin-left: 310px;
+}
+h1{
+    font-size: 35px;
+}
+#t2{
+    cursor: pointer;
+    position: absolute;
+	left: 400px;
+	text-align: center;
+    margin-top: 220px;
+}
+
+
+
+.popup{
+    height: 200px;
+    width: 400px;
+    
+    background-color: beige;
+}
+
+.numero{
+    border-radius: 80px;
+    height: 40px;
+    width: 40px;
+    background-color: antiquewhite;
+    text-align: center;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

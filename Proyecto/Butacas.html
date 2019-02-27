@@ -1,0 +1,316 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> Cinema </title>
+        <script src="jquery/jquery-3.2.1.min.js"></script>
+        
+        <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+        	<link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+	<body onload="cargardatosdelapelicula()">
+	<div class="contenedor">
+
+		<div class="contenido">
+            <div class="titulo"><h3 id="titulodelapelicula"></h3></div>
+            <table id="t1"><tr><td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               H1
+                </div></td>
+                <td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               H2
+                </div></td>
+                <td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               H3
+                </div></td>
+                <td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               H4
+                </div></td>
+                </tr>
+                <tr><td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               G1
+                </div></td>
+                <td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               G2
+                </div></td>
+                <td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               G3
+                </div></td>
+                <td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               G4
+                </div></td>
+                </tr>
+                <tr><td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               F1
+                </div></td>
+                <td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               F2
+                </div></td>
+                <td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               F3
+                </div></td>
+                <td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               F4
+                </div></td>
+                </tr>
+                <tr><td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               E1
+                </div></td>
+                <td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               E2
+                </div></td>
+                <td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               E3
+                </div></td>
+                <td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               E4
+                </div></td>
+                </tr>
+                <tr><td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               D1
+                </div></td>
+                <td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               D2
+                </div></td>
+                <td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               D3
+                </div></td>
+                <td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               D4
+                </div></td>
+                </tr>
+                <tr><td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               C1
+                </div></td>
+                <td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               C2
+                </div></td>
+                <td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               C3
+                </div></td>
+                <td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               C4
+                </div></td>
+                </tr>
+                <tr><td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               B1
+                </div></td>
+                <td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               B2
+                </div></td>
+                <td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               B3
+                </div></td>
+                <td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               B4
+                </div></td>
+                </tr>
+                <tr><td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               A1
+                </div></td>
+                <td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               A2
+                </div></td>
+                <td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               A3
+                </div></td>
+                <td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               A4
+                </div></td>
+                </tr>
+            </table>
+            <table id="t2">
+                <tr>
+                    <td>
+           <div class="post-body">
+               <img src="cam.png" width="80px" height="80px" />
+               <br>
+                </div></td>
+                </tr>
+                <tr>
+                <td>
+                <td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               D5
+                </div></td>
+                </tr>
+                <tr>
+                <td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               C5
+                </div></td>
+                    <td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               C6
+                </div></td>
+                </tr>
+                <tr>
+                <td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               B5
+                </div></td>
+                    <td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               B6
+                </div></td>
+                </tr>
+                <tr>
+                <td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               A5
+                </div></td>
+                    <td>
+           <div class="post-body">
+               <img src="asiento.png" width="50px" height="50px" />
+               <br>
+               A6
+                </div></td>
+                </tr>
+            </table>
+	</div>
+        </div>
+        
+        
+        <!-- Div emergente -->
+        
+        <div class="popup" style="display: non">
+            <div class="numero"><span id="Asiento">A1</span></div>
+            <div class="cuerpodelpop">
+                <div class="datodelpop">
+                    <span>Nombre:</span>
+                    <input type="text">
+                </div>
+                <div class="datodelpop">
+                    <span>Seccion:</span>
+                    <input type="text">
+                </div>
+                <div class="datodelpop">
+                    <span>Carnet:</span>
+                    <input type="number">
+                </div>
+            </div>
+        </div>
+        
+	</body>
+	<script type="text/javascript" src="pelifrontend.js">
+		</script>
+    <script>function cargardatosdelapelicula()
+    
+    {
+        
+        var pelicula = JSON.parse(localStorage.getItem('peliculaseleccionada'))
+        
+        document.getElementById("titulodelapelicula").innerHTML += pelicula[0].NOMBRE + "<hr><p>Tanda: "+pelicula[0].FECHA+ " Inicia: "+pelicula[0].HORAINICIO +": "+pelicula[0].MINUTOINICIO+"<p/>";
+        
+        
+        
+        
+    }</script>
+</html>
