@@ -43,7 +43,7 @@ Guardar(req,res) {
 }
     
  Modificar(req,res) {
-		Item.update( {_id : req.body.id},//modifica el guardado anterior
+		Item.update( {_id : req.body._id},//modifica el guardado anterior
 					{$set://y lo setea
 			{
    NOMBRE: req.body.NOMBRE,

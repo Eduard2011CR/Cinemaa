@@ -185,7 +185,7 @@
         {
 
 
-             let clasepeliculainstanciada = new Pelicula(id);
+             let clasepeliculainstanciada = new _Pelicula(id);
                clasepeliculainstanciada.Seleccionarporid().then(function(response) {
 
 
@@ -210,7 +210,7 @@
     }
     function cargarpeliculasdelmesyanno()
     {
-        let clasepeliculainstanciada = new Pelicula();
+        let clasepeliculainstanciada = new _Pelicula();
                clasepeliculainstanciada.peliculaspormesyanno(document.getElementById("mesactual").innerHTML,document.getElementById("annoactual").innerHTML).then(function(response) {
                    
  for(var elemento in response)

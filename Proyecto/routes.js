@@ -8,6 +8,14 @@ module.exports = function(app) {
 	app.post('/api/seleccionarpeliculaporfecha', clasepelicula.Seleccionarporfecha);
 	app.post('/api/seleccionarpeliculaporid', clasepelicula.Seleccionarporid);
 	app.post('/api/seleccionarpeliculapornombre', clasepelicula.Seleccionarpornombre);
+
+
+	var claseadm = new controllerAdministrador();
+		app.post('/api/nuevoadm', claseadm.Guardar);
+	app.post('/api/loginadm', claseadm.Login);
+
+
+
 	app.get('*', function(req,res) {//localhost:8080
 		res.sendfile('./login.html');//Carga unica de la vista
 	});
