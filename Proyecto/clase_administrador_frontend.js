@@ -1,37 +1,22 @@
      
             
-        class _Pelicula {
-   constructor(_id, 
-NOMBRE,
-    DURACIONMINUTOS,
-    GENERO,
-    IDIOMAAUDIO,
-    IDIOMASUB,
-    SINOPSIS,
-    CLASIFICACION,
-    PRECIO,
-    HORAINICIO,
-    FECHA,
-    MINUTOINICIO,
-    ASIENTOS,
+        class _Usuario {
+   constructor(
+    _id, 
+    NOMBRE,
+    CLAVE,
+    EMAIL,
     IMAGEN,
-    ESTADO
+    ESTADO,
+    SALT
             ) {
        this._id=_id;
-this.NOMBRE =NOMBRE;
-    this.DURACIONMINUTOS=DURACIONMINUTOS;
-    this.GENERO=GENERO;
-    this.IDIOMAAUDIO=IDIOMAAUDIO;
-    this.IDIOMASUB=IDIOMASUB;
-    this.SINOPSIS=SINOPSIS;
-    this.CLASIFICACION=CLASIFICACION;
-    this.PRECIO=PRECIO;
-    this.HORAINICIO=HORAINICIO;
-    this.FECHA=FECHA;
-    this.MINUTOINICIO=MINUTOINICIO;
-    this.ASIENTOS=ASIENTOS;
-    this.IMAGEN=IMAGEN;
+    this.NOMBRE =NOMBRE;
+    this.CLAVE =CLAVE;
+    this.EMAIL =EMAIL;
+    this.IMAGEN =IMAGEN;
     this.ESTADO=ESTADO;
+    this.SALT =SALT;
    }
 Guardar() {
    var objetoaenviar = this;
@@ -65,6 +50,8 @@ catch(err) {
     });
 }
     
+
+
  Login() {
   
        var objetoaenviar = this;
@@ -100,26 +87,41 @@ catch(err) {
     
 }   
    
+}
+             let imagenenbase64 = "";
+      $("#imgpeli").change(function(){
+       readURL(this);
+ });
+    
+        function readURL(input) {
+
+                    if (input.files && input.files[0]) {
+                        var reader = new FileReader();
+
+                        reader.onload = function (e) {
+
+                            imagenenbase64=e.target.result;
+
+                        
+                          
+                        }
+
+                        reader.readAsDataURL(input.files[0]);
+                    }
+                }
+
         function botonguardarclick() //esta funcionlle na el formulario de pelicula y lo almacena tomando el html y las variables
             {
-                var peliculainstanciada = new _Pelicula(0,
-                document.getElementById("Nombre").value,
-                 document.getElementById("duracion").value,
-                document.getElementById("genero").value,
-               document.getElementById("idiomaaudio").value,
-                document.getElementById("idiomasub").value,
-              document.getElementById("sinopsis").value,
-              document.getElementById("clasificacion").value,
-              document.getElementById("precio").value,
-            document.getElementById("hora").value,
-            document.getElementById("fecha").value,
-           document.getElementById("minuto").value,
-         asientos,
-          imagenenbase64,
-         document.getElementById("estado").value
+                var administradorinstanciada = new _Usuario(0,
+                document.getElementById("nombre").value,
+                document.getElementById("password").value,
+                document.getElementById("email").value,
+                imagenenbase64
+                
+                    
                 );
                                                         
-                peliculainstanciada.Guardar().then(function(response) { //almacena los datos y lanza un alert que indica un guardado exitoso
+                administradorinstanciada.Guardar().then(function(response) { //almacena los datos y lanza un alert que indica un guardado exitoso
   console.log("Success!", response);
             alert("Guardado con exito");
               
@@ -130,3 +132,23 @@ catch(err) {
 });                                       
                                                         
             }
+
+        function botonlogin() //esta funcionlle na el formulario de pelicula y lo almacena tomando el html y las variables
+            {
+                var administradorinstanciada = new _Usuario(0,0,
+                document.getElementById("password").value,
+                document.getElementById("email").value
+                    
+                );
+                                                        
+                administradorinstanciada.Login().then(function(response) { //almacena los datos y lanza un alert que indica un guardado exitoso
+  console.log("Success!", response);
+            alert("Se ha iniciado sesion");
+              
+}, function(error) {
+  console.error("Failed!", error); // indica un fallo en el proceso
+             alert("Error " + error);
+           
+});                                       
+                                                        
+            }    

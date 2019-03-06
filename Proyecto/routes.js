@@ -1,4 +1,7 @@
 var controllerpelicula = require('./controllerpelicula.js');
+var controllerAdministrador = require('./controlleratministrador.js');
+
+
 module.exports = function(app) {
 	var clasepelicula = new controllerpelicula();
 	app.post('/api/nuevapelicula', clasepelicula.Guardar);
